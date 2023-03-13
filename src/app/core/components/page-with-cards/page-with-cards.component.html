@@ -1,0 +1,14 @@
+<h2>Популярные фильмы</h2>
+<div class="page">
+  <div class="card-placement">
+    <div *ngFor="let card of cards">
+      <app-cards [card]="card"></app-cards>
+    </div>
+  </div>
+  <div>
+    <h2>Самый лучший фильм</h2>
+    <div *ngIf="favoriteMovieSelected">
+      <app-cards [card]="cardFavorite"></app-cards>
+    </div>
+  </div>
+</div>

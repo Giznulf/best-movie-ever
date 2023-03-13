@@ -1,0 +1,14 @@
+<div>
+  <img class="picture" src="/images/{{ card.id }}.jpeg" alt="{{ card.name }}" />
+  <h4 class="name">{{ card.name }}</h4>
+  <h6 class="genre">{{ genres }}</h6>
+  <h6 class="year">{{ card.year }}</h6>
+  <div class="favorites" (click)="changeFavorite(card)" [ngSwitch]="favorite">
+    <ng-template ngSwitchCase="off"
+      ><img src="assets/favorites-icon/add-to-favorites.png" alt=""
+    /></ng-template>
+    <ng-template ngSwitchCase="on"
+      ><img src="assets/favorites-icon/already-in-favorites.png" alt=""
+    /></ng-template>
+  </div>
+</div>

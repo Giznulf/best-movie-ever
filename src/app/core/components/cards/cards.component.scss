@@ -1,0 +1,83 @@
+%text-montserrat {
+  font-family: "Montserrat";
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  color: #1d1838;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+%text-montserrat-h4 {
+  @extend %text-montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+%text-montserrat-h6 {
+  @extend %text-montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.picture {
+  width: 100%;
+
+  left: 0px;
+  top: 0px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.name {
+  @extend %text-montserrat-h4;
+  width: 180px;
+  height: 16px;
+
+  align-self: stretch;
+}
+.genre {
+  @extend %text-montserrat-h6;
+  width: 150px;
+  height: 28px;
+}
+.year {
+  @extend %text-montserrat-h6;
+  width: 26px;
+  height: 14px;
+}
+.favorites {
+  img {
+    display: none;
+  }
+}
+:host:hover {
+  .favorites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    padding: 3px 2px;
+    gap: 10px;
+    width: 48px;
+    height: 48px;
+    left: 150px;
+    bottom: 40px;
+    border-radius: 100px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    img {
+      display: inline;
+      width: 20px;
+      height: 18px;
+    }
+  }
+  .favorites:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
